@@ -278,7 +278,7 @@ body {
 
 .contenedor_cerrar {
     position: absolute;
-    top: -15%;
+    top: 0;
     left: 95%;
     z-index: 1001;
 }
