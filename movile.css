@@ -1,0 +1,175 @@
+@media only screen and (max-width: 430px) {
+
+    .header {
+        display: none;
+    }
+
+    #inicio {
+        padding: 10px 25px;
+        top: 0;
+        border: 1px red solid;
+        gap: 170px;
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+
+    #menu {
+        
+        padding: 15px;
+        
+    }
+
+    #menu ul {
+        background-color: white;
+        color: black;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+        position: absolute;
+        top: 100%;
+        width: 80%;
+        left: -120%;
+        z-index: 100;
+        transition: all 0.5s linear;
+        padding: 0 20px;
+        
+    }
+
+    #menu ul li {
+        padding: 5px 10px;
+        width: 100%;
+        border-bottom: 2px gray dotted;
+    }
+
+    #menu ul li a {
+        width: 100%;
+        color: black;
+    }
+
+    #menu ul li a:hover {
+        background: gray;
+        color: #c84d2f;
+    }
+
+    #icono-menu {
+        display: flex;
+    }
+
+    #menu ul.abrir_menu {
+        left: 0;
+    }
+
+    #menu ul.cerrar_menu {
+        left: -120%;
+    }
+
+    .contenedor-informacion {
+        background-color: #ff404a76;
+        max-width: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+      }
+
+      .contenedor-informacion h2{
+        font-size: 50px;
+        color: white;
+      }
+    
+      .contenedor-informacion p {
+        display: none;
+      }
+
+      #contenedor-clinica {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contenedor-beneficios {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .carousel {
+        width: 100%;
+        
+    }
+
+    .figure-terapia {
+        width: 100%;
+    }
+
+    .terapia {
+        width: 100%;
+    }
+
+    #gallerys {
+        height: 1900px;
+    }
+
+    .contenedor-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .contenedor-gallery figure {
+        width: 90%;
+        height: 100%;
+        padding: 20px 0;
+        margin: auto;
+      }
+
+      .contenedor-article {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #contenedor-fags {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .figure-terapia2 {
+        width: 100%;
+    }
+
+    .terapia2 {
+        width: 100%;
+    }
+
+    .contenedor-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contenedor-form figure {
+        display: none;
+    }
+
+    .form-principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-acordeon {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    #video-responsivo {
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

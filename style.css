@@ -1,0 +1,855 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.contenedor-menuMovil {
+    width: 400px;
+}
+
+#menu {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    background: var(--rojo);
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#menu ul li {
+    padding: 5px;
+}
+
+#menu ul li a {
+    color: black;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: #c84d2f;
+}
+
+#icono-menu {
+    display: none;
+}
+
+.header {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    background-color: #c84d2f;
+    gap: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor-contacto {
+    width: 500px;
+    text-align: center;
+    display: flex;
+    gap: 30px;
+}
+
+.contenedor-redes {
+    width: 400px;
+    justify-content: right;
+    display: flex;
+    gap: 30px;
+}
+
+#slide {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.rslides {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    max-height: 600px;
+}
+
+.rslides li {
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    display: block;
+}
+
+.rslides img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos de las flechas de navegación */
+.rslides_nav.prev,
+.rslides_nav.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    z-index: 10;
+    text-decoration: none;
+}
+
+.rslides_nav.prev {
+    left: 10px;
+}
+
+.rslides_nav.next {
+    right: 10px;
+}
+
+.contenedor-informacion {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 120px;
+    transform: translateY(-50%);
+    padding: 10px;
+    width: 300px;
+    text-align: right;
+}
+
+.contenedor-informacion h2 {
+    color: #ff4048;
+    font-size: 60px;
+}
+
+.contenedor-informacion p {
+    margin: 20px 0;
+}
+
+.btn-join {
+    display: inline-block;
+    background-color: #ff4048;
+    padding: 10px 35px;
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor-regresar {
+    position: fixed;
+    background-color: #0d5adc;
+    z-index: 6;
+    top: 90%;
+    left: 91.5%;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-regresar a {
+    color: white;
+}
+
+#contenedor-clinica {
+    display: grid;
+    /* Activa el Grid Layout */
+    grid-template-columns: 1fr 2fr;
+    /* Definimos dos columnas: una de tamaño flexible y otra más grande */
+    grid-gap: 20px;
+    /* Espacio entre los elementos dentro del grid */
+    padding: 20px;
+    position: relative;
+}
+
+.clinica {
+    display: flex;
+    justify-content: center;
+    /* Centra la imagen dentro del contenedor */
+    align-items: center;
+}
+
+.img-clinica {
+    width: 100%;
+    height: auto;
+}
+
+.btn-modal {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #c84d2f;
+    text-decoration: none;
+    color: white;
+}
+
+.contenedor-inf {
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.contenedor-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.contenedor-beneficios p {
+    margin: 0;
+    /* Quita los márgenes de los párrafos para mejor alineación */
+    display: flex;
+    /* Permite alinear el ícono y el texto */
+    align-items: center;
+    /* Centra el ícono verticalmente con el texto */
+    gap: 5px;
+    /* Espacio entre el ícono y el texto */
+}
+
+.texto-naranja {
+    color: #c84d2f;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contenedor_form {
+    width: 100%;
+    height: 100%;
+    border: 1px red solid;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.429);
+    position: fixed;
+    display: none
+}
+
+.fondo_modal {
+    max-width: 450px;
+    position: relative;
+    border: 1px blue solid;
+    padding: 30px 20px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedor_cerrar {
+    position: absolute;
+    top: -15%;
+    left: 95%;
+    z-index: 1001;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+}
+
+.icono_cerrar {
+    cursor: pointer;
+    color: black;
+    font-size: 26px;
+    transition: all 0.5s;
+}
+
+
+.descripcion {
+    padding-top: 20px;
+}
+
+.contModal form {
+    width: 100%;
+}
+
+.fondo_modal input {
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px gray solid;
+    font-weight: bold;
+    display: block;
+    margin: 20px 0;
+}
+
+.form-modal textarea {
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px gray solid;
+    font-weight: bold;
+    height: 150px;
+    display: block;
+    resize: none;
+}
+
+.btn-form {
+    background-color: #f46562;
+    border-radius: 40px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    margin: 20px 0;
+}
+
+.btn-form:hover {
+    color: black;
+    background-color: white;
+
+}
+
+.contenedor-fondo {
+    background-color: rgba(0, 0, 0, 0.859);
+    padding: 20px;
+}
+
+.titulo-blanco {
+    color: white;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 1000px;
+    /* Suma de los anchos de los dos artículos más el espacio entre ellos */
+    overflow: hidden;
+    
+    margin: auto;
+}
+
+.profiles {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    /* Suavidad en el movimiento del carrusel */
+}
+
+.active {
+    transform: scale(1.05);
+    border-color: #007BFF;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.indicators span {
+    width: 25px;
+    height: 10px;
+    background-color: #ecbfb4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicators span.active {
+    background-color: #c84d2f;
+}
+
+.titulo-terapia {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.figure-terapia {
+    width: 150px;
+    /* Cambia el ancho de la figura */
+    height: 150px;
+    /* Cambia el alto de la figura */
+    flex-shrink: 0;
+    /* Evita que se redimensione en flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Oculta cualquier parte de la imagen que sobresalga */
+}
+
+.figure-terapia img {
+    width: 100%;
+    /* Hace que la imagen se ajuste al ancho de la figura */
+    height: 100%;
+    /* Hace que la imagen se ajuste al alto de la figura */
+    object-fit: cover;
+}
+
+.terapia {
+    width: 500px;
+    /* Ancho total del artículo */
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    /* Dos columnas: figura y texto */
+    gap: 15px;
+    /* Espaciado entre las columnas */
+    align-items: center;
+    /* Alinea elementos verticalmente en el centro */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+#gallerys {
+    background-image: url(imagenes/parallax.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    height: 650px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-parallax {
+    position: absolute;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-gallery {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5px 20px;
+    
+}
+
+.contenedor-gallery figure {
+    width: 100%;
+    height: 250px;
+    margin: 0;
+}
+
+.contenedor-gallery figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+
+}
+
+
+.contenedor-info{
+    color: white;
+    text-align: center;
+}
+
+#contenedor-member {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.contenedor-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px blue solid;
+    position: relative;
+    margin-top: 10px;
+}
+
+.member figure {
+    width: 300px;
+    height: 350px;
+}
+
+.member figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.info-member {
+    position: absolute;
+    top: 90%;
+    padding: 20px;
+    background-color: white;
+    width: 85%;
+    text-align: center;
+    transition: top 0.3s ease;
+}
+
+.member:hover .info-member{
+    top: 75%;
+    background-color: #c84d2f;
+}
+
+.redes-member {
+    display: none;
+}
+
+.member:hover .redes-member {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contenedor-icono {
+    background-color: white;
+    color: #c84d2f;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-pricing {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.pricing {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+}
+
+.plan {
+    background-color: #c84d2f;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.info-plan {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    color: white;
+    background-color: #c84d2f;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.precio {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#contenedor-fags {
+    display: grid;
+    /* Activa el Grid Layout */
+    grid-template-columns: 1fr 2fr;
+    /* Definimos dos columnas: una de tamaño flexible y otra más grande */
+    grid-gap: 20px;
+    position: relative;
+}
+
+
+.contenedor-rosa {
+    width: 30px;
+    height: 30px;
+    background-color: #ecbfb4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activador-acordeon {
+    padding: 10px;
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.activador-acordeon:hover {
+    background-color: #c84d2f;
+    color: white;
+}
+
+.informacion-acordeon {
+    display: none;
+    padding: 20px;
+    border: 1px black solid;
+}
+
+.terapia2 {
+    align-items: center;
+    padding: 0; /* Elimina el padding */
+    border: none; /* Elimina el borde */
+    background-color: transparent; /* Fondo transparente */
+    box-shadow: none; /* Sin sombra */
+    flex-shrink: 0;
+}
+
+.figure-terapia2 {
+    width: 400px; /* Ancho fijo */
+    height: 300px; /* Alto fijo para mantener proporción */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta las partes de la imagen que sobresalgan */
+    margin-top: 20px; /* Elimina márgenes de la figura */
+}
+
+.figure-terapia2 img {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: 100%; /* Ajusta el alto al contenedor */
+    object-fit: cover; /* Mantiene el enfoque y recorta la imagen para llenar */
+}
+
+#foto1 {
+    filter: grayscale(0);
+    transition: all 0.5s linear;
+}
+
+#foto1:hover {
+    filter: grayscale(100%);
+}
+
+#foto2 {
+    filter: grayscale(0);
+    transition: all 0.5s linear;
+}
+
+#foto2:hover {
+    filter: grayscale(100%);
+}
+
+#foto3 {
+    filter: grayscale(0);
+    transition: all 0.5s linear;
+}
+
+#foto3:hover {
+    filter: grayscale(100%);
+}
+
+.contenedor-form {
+    display: grid;
+    /* Activa el Grid Layout */
+    grid-template-columns: 2fr 1fr;
+    /* Definimos dos columnas: una de tamaño flexible y otra más grande */
+    grid-gap: 100px;
+    position: relative;
+    align-items: center;
+}
+
+.form-principal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    gap: 40px; /* Espacio entre elementos */
+    align-items: start; /* Alinear elementos al inicio */
+}
+
+.form-principal input {
+    
+    width: 100%; /* Ocupa el 100% de la celda */
+    padding: 10px 15px;
+    border: 1px solid gray;
+    font-weight: bold;
+    display: block;
+}
+
+.form-principal textarea {
+    grid-column: span 2; /* Ocupa ambas columnas */
+    border-radius: 10px;
+    width: 100%; /* Ancho completo */
+    padding: 10px 15px;
+    border: 1px solid gray;
+    font-weight: bold;
+    height: 150px;
+    resize: none;
+}
+
+.btn-form2 {
+    grid-column: span 2; /* Ocupa ambas columnas */
+    background-color: #f46562;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+.btn-form2:hover {
+    color: black;
+    background-color: white;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column h3,
+  .footer-column h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social a {
+    color: gray;
+    padding-top: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .footer-social a:hover {
+    color: #f46562;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f46562;
+    margin-bottom: 10px;
+  }
+
+  #video-responsivo {
+    width: 900px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+#video-responsivo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+  
