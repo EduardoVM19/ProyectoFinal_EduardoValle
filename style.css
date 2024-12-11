@@ -196,6 +196,7 @@ body {
     /* Espacio entre los elementos dentro del grid */
     padding: 20px;
     position: relative;
+    font-family: "Poppins", sans-serif;
 }
 
 .clinica {
@@ -487,6 +488,7 @@ body {
     flex-direction: column;
     margin-bottom: 50px;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .contenedor-article {
@@ -607,6 +609,7 @@ body {
     /* Definimos dos columnas: una de tamaño flexible y otra más grande */
     grid-gap: 20px;
     position: relative;
+    font-family: "Poppins", sans-serif;
 }
 
 
